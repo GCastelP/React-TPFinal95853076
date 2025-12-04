@@ -8,7 +8,7 @@ const HomePage = () => {
     <>
         <Container>
             <h1 className="my-4">Nuestros productos</h1>            
-            {/* Aquí es donde se usa el componente ProductList para mostrar todos los productos */}
+            {/* Aquí es donde se usa el componente ProductList para mostrar todos los productos.*/}
             <ProductList />
         </Container>
     </>
