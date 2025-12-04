@@ -27,15 +27,9 @@ const Header = () => {
                 {/* Contenedor colapsable */}
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto align-items-center">
-                        <Nav.Link as={Link} to="/" className="me-3 text-dark">
-                            Home
-                        </Nav.Link>
-                        <Nav.Link as={Link} to="/ofertas" className="me-3 text-dark">
-                            Ofertas
-                        </Nav.Link>
-                        <Nav.Link as={Link} to="/virales" className="me-3 text-dark">
-                            Marcas virales
-                        </Nav.Link>
+                        <Nav.Link as={Link} to="/" className="me-3 text-dark">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/ofertas" className="me-3 text-dark">Ofertas</Nav.Link>
+                        <Nav.Link as={Link} to="/virales" className="me-3 text-dark">Marcas virales</Nav.Link>
 
                         <div className="d-flex align-items-center">
                             <Button 
