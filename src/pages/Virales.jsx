@@ -1,0 +1,16 @@
+import React from 'react'
+import ProductList from './ProductList';
+import ProductList from '../components/ProductList';
+
+const Virales = () => {
+  return (
+    <>  
+      <div className="container">
+        <h1>Ventas Virales</h1>
+            <ProductList category="jewelery" />
+        </div>
+    </>
+  )
+}
+
+export default Virales
