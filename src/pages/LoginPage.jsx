@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Container, Card, Form, Button, Alert } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext'; // importa el hook
+import { useAuth } from '../context/AutoContext'; // importa el hook
 
 const LoginPage = () => {
             const { login } = useAuth(); // Usa el hook
