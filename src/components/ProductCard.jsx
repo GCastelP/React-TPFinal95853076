@@ -1,9 +1,31 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+//  1. Importa el hook del carrito    
+import { useCart } from '../context/CartContext';  
+import { useAuth } from '../context/AuthContext'; // <-- Importa useAuth
+import { useNavigate } from 'react-router-dom';   // <-- Importa useNavigate
 
-// El componente ProductCard.jsx Recibe dos "props": el objeto 'product' y la función 'agregarAlCarrito'
 
-const ProductCard = ({ product, agregarAlCarrito }) => {
+// 2. El componente ProductCard.jsx Recibe solo la  "props": el objeto 'product' 
+
+const ProductCard = ({ product }) => {
+    // <-- 3. Usa el hook para obtener la función addToCart
+    const { addToCart } = useCart(); 
+    const { isLoggedIn } = useAuth();   // <-- Obtén el estado de autenticación
+    const navigate = useNavigate();     // <-- Obtén la función de navegación
+
+    // Función que maneja el clic en el botón
+    const handleAddToCart = () => {
+        if (isLoggedIn) {
+            // Si está logueado, añade el producto al carrito
+            addToCart(product);
+        } else {
+            // Si no está logueado, redirige a la página de login
+            navigate('/login');
+        }
+    };
+
+
   return (
     <>  
         {/* armado de los cards */}
@@ -51,14 +73,13 @@ const ProductCard = ({ product, agregarAlCarrito }) => {
                 </Card.Text>
 
                 {/* 
-                    Este es el punto clave de interacción.
-                    El botón llama a la función 'agregarAlCarrito' que recibió como prop.
-                    Le pasa el objeto 'product' completo para que el componente padre sepa
-                    qué producto se quiere agregar.
+                    4. Este es el punto clave de interacción.
+                    El botón llama a la función 'addCart' usando la función que obtuvo del
+                    contexto en el [paso 3.
                 */}
                 <Button 
                     variant="primary" 
-                    onClick={() => agregarAlCarrito(product)} 
+                    onClick={() => addToCart(product)} 
                     className="mt-auto w-100"
                 >
                     Agregar al carrito

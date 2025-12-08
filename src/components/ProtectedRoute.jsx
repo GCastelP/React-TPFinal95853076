@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { useAuth } from '../context/AutoContext'; // Importa tu hook de autenticación
+import { useAuth } from '../context/AuthContext'; // Importa tu hook de autenticación
 
 const ProtectedRoute = ({ children }) => {
     const { isLoggedIn } = useAuth();
