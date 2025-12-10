@@ -1,9 +1,14 @@
+// src/components/ProductList.jsx
 // Este es un componente contenedor o "inteligente".
 // Su responsabilidad es gestionar la lógica: obtener los datos de una API,
+// manejar estados de carga y error, y pasar los datos a componentes de presentación.
+// Usa React-Bootstrap para el diseño de la cuadrícula de productos.
 
 import React, { useEffect, useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Spinner, Alert } from 'react-bootstrap';
 import ProductCard from './ProductCard';
+// Importa el hook personalizado para acceder al contexto de productos
+import { useProduct } from '../context/ProductContext';
 
 const ProductList = ({ category = null }) => {
   // 1. 'useState' para guardar la lista de productos y el estado de carga

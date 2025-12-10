@@ -1,3 +1,9 @@
+// src/context/CartContext.jsx
+// Para gestionar el estado global del carrito de compras en la aplicación,
+// incluyendo añadir, eliminar y actualizar cantidades de productos,    
+// así como la persistencia del carrito en localStorage.
+// Usa React Context y Hooks.
+
 import { createContext, useContext, useState, useEffect } from 'react'; // <-- 1. Importa useEffect
 
 const CartContext = createContext();

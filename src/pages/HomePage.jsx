@@ -1,3 +1,8 @@
+// src/pages/HomePage.jsx
+// Página de inicio que muestra una lista de productos disponibles
+// Utiliza el componente ProductList para renderizar los productos
+// Usa React y React-Bootstrap para el diseño de la página. 
+
 import React from "react";
 import ProductList from "../components/ProductList";
 import { Container } from "react-bootstrap";

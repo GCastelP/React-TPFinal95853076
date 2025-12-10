@@ -1,3 +1,10 @@
+// src/pages/CartPage.jsx
+// Página de Carrito de Compras que muestra los productos añadidos al carrito
+// Permite modificar cantidades, eliminar productos y proceder al pago
+// Si el usuario no está autenticado, le pide que inicie sesión antes de pagar
+// Utiliza React-Bootstrap para el diseño y el hook useCart para gestionar el estado del carrito
+// Usa React y Hooks.   
+
 import React from 'react';
 import { Container, Row, Col, Image, Button, Form, Card } from 'react-bootstrap';
 import { useCart } from '../context/CartContext';

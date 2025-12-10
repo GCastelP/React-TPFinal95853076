@@ -1,3 +1,5 @@
+// src/components/ProductCard.jsx
+// Componente de tarjeta de producto que muestra detalles y permite añadir al carrito
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 //  1. Importa el hook del carrito    

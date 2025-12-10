@@ -1,4 +1,5 @@
 // src/components/Header.jsx
+// Componente de cabecera con navegación, carrito y autenticación
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Button, Badge } from 'react-bootstrap';

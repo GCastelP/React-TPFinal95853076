@@ -1,4 +1,9 @@
 // src/pages/LoginPage.jsx
+// Página de Login para que los usuarios inicien sesión
+// Utiliza el contexto de autenticación para manejar el estado de login
+// Redirige a la página principal si el login es exitoso
+// Usa React, React-Bootstrap y React Router para la navegación.    
+
 import { useState, useEffect } from 'react';
 import { Container, Card, Form, Button, Alert } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +16,7 @@ const LoginPage = () => {
     // Si el usuario ya está logueado, lo redirigimos al home para que no vea el login de nuevo
     useEffect(() => {
         if (isLoggedIn) {
-            navigate('/');
+            navigate('/administracion');
         }
     }, [isLoggedIn, navigate]);
 

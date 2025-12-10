@@ -1,3 +1,8 @@
+// src/components/ProtectedRoute.jsx
+// Componente de Ruta Protegida que verifica si el usuario está autenticado
+// antes de permitir el acceso a rutas protegidas.
+// Si no está autenticado, redirige a la página de login.
+// Usa el hook useAuth para obtener el estado de autenticación.    
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext'; // Importa tu hook de autenticación

@@ -1,3 +1,8 @@
+// src/context/AuthContext.jsx
+// Para gestionar el estado global de autenticación en la aplicación,
+// incluyendo login, logout y persistencia del token en localStorage.  
+// Proporciona un hook personalizado useAuth para acceder fácilmente al contexto.
+// Usa React Context y Hooks. 
 import React, { createContext, useState, useEffect, useContext } from 'react'
 
 
